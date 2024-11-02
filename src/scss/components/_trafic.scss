@@ -1,0 +1,102 @@
+.trafic {
+  margin-bottom: 160px;
+
+  &__title {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: var(--chernyy);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__box {
+    padding: 52px;
+    position: relative;
+    overflow: hidden;
+    max-width: 912px;
+    height: 705px;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(1) {
+      background: var(--akcent);
+      background-image: url(../img/trafic-bg-1.svg);
+
+    }
+
+    &:nth-child(2) {
+      background: var(--chernyy);
+      background-image: url(../img/trafic-bg-2.svg);
+
+      .trafic__accent {
+        box-shadow: 0 6px 30px 0 rgba(145, 145, 145, 0.3);
+        background: #fadddd;
+
+        color: #e31b1f;
+
+        &::before {
+          background-image: url(../img/trafic-svg-2.svg);
+        }
+      }
+    }
+  }
+
+  &__accent {
+    margin: 0;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-radius: 70px;
+    padding: 8px 16px 8px 8px;
+    box-shadow: 0 6px 30px 0 rgba(145, 145, 145, 0.3);
+    background: #cde9dd;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    color: #0cb46d;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 52px;
+      height: 52px;
+      background-image: url(../img/trafic-svg-1.svg);
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 100%;
+    color: var(--chernyy);
+    border-radius: 1111px;
+    padding: 16px 24px;
+    background: var(--belyy);
+  }
+
+  &__img {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    display: block;
+  }
+}

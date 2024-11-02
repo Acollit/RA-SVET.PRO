@@ -1,0 +1,131 @@
+.meeting {
+  margin-bottom: 160px;
+
+
+  &__content {
+    border-radius: 20px;
+    background-color: var(--akcent);
+    padding: 52px;
+    background-image: url(../img/contacts-bg.svg);
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__inner {
+
+    max-width: 900px;
+
+
+  }
+
+  &__over {
+    position: relative;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 11px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--belyy);
+  }
+
+  &__line {
+    margin-bottom: 32px;
+
+  }
+
+  &__text {
+    max-width: 780px;
+    margin: 0;
+    margin-bottom: 52px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    color: var(--belyy);
+  }
+
+  &__btns {
+    max-width: 803px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 120px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--belyy);
+  }
+
+  &__action {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--belyy);
+  }
+
+  &__btn {
+    border-radius: 8px;
+    padding: 20px 44px;
+    background: var(--belyy);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--chernyy);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: var(--belyy);
+      background: var(--chernyy);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+  }
+
+  &__descr {
+    max-width: 450px;
+    width: 100%;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    color: var(--belyy);
+  }
+
+  &__link {
+    width: max-content;
+    border: 1px solid var(--belyy);
+    border-radius: 8px;
+    padding: 20px 44px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--belyy);
+
+    &::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url(../img/tel.svg);
+    }
+  }
+
+  &__on {
+    overflow: hidden;
+    max-width: 0px;
+  }
+}

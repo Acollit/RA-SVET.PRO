@@ -1,0 +1,17 @@
+
+// colors
+:root {
+  // base
+  --font-family: "Manrope", sans-serif;
+  --content-width: 1840px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+    --chernyy: #00171f;
+    --akcent: #004fdf;
+    --goluboy: #00a8e8;
+    --goluboy-2: #a3cef1;
+    --fonovyy: #f2f5fc;
+    --belyy: #fff;
+}

@@ -1,0 +1,137 @@
+.footer {
+  padding: 52px 0;
+  background: var(--chernyy);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 60px;
+  }
+
+  &__cop {
+    margin: 0;
+    margin-bottom: 17px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+    color: var(--belyy);
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 7px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+    color: var(--belyy);
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 28px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: var(--belyy);
+    opacity: 0.5;
+  }
+
+  &__phone {
+    display: block;
+    margin-bottom: 16px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 100%;
+    color: var(--belyy);
+  }
+
+
+  &__mail {
+    display: block;
+    margin-bottom: 46px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 100%;
+    color: var(--belyy);
+  }
+
+  &__socials {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__social {
+    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    background: #08c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background: #0074b8;
+    }
+
+    &:nth-child(2) {
+      background: #25d366;
+
+      &:hover {
+        background: #11bf52;
+      }
+    }
+  }
+
+  &__btn {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    color: var(--chernyy);
+    border-radius: 8px;
+    padding: 15px 32px;
+    background: var(--belyy);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background: var(--akcent);
+      color: var(--belyy);
+    }
+  }
+
+  &__toup {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, .5);;
+
+
+    &::after {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 28px;
+      background-image: url(../img/toup.svg);
+    }
+  }
+}

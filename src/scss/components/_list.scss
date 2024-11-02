@@ -1,0 +1,103 @@
+.list {
+  padding-bottom: 80px;
+  margin-bottom: 80px;
+  background: var(--belyy);
+  border-radius: 0 0 30px 30px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 80px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__box {
+    max-width: 912px;
+    width: 100%;
+    background: var(--fonovyy);
+    border-radius: 20px;
+    padding: 52px;
+
+
+
+    &:nth-child(2) {
+      background: var(--akcent);
+
+      .list__item {
+        &::before {
+          background-image: url(../img/trafic-svg-1.svg);
+        }
+      }
+
+      .list__subtitle {
+        color: var(--belyy);
+      }
+
+      .list__name {
+        color: var(--belyy);
+      }
+
+      .list__text {
+        color: var(--belyy);
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 60px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--chernyy);
+  }
+
+  &__item {
+    max-width: 660px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      min-width: 52px;
+      min-height: 52px;
+      background-image: url(../img/trafic-svg-2.svg);
+    }
+  }
+
+
+
+  &__name {
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: var(--chernyy);
+
+
+  }
+
+  &__text {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+    color: var(--chernyy);
+  }
+}

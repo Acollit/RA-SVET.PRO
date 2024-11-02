@@ -1,0 +1,114 @@
+.algoritm {
+  margin-bottom: 160px;
+
+  &__title {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--chernyy);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    position: relative;
+    max-width: 1096px;
+    width: 100%;
+    padding-bottom: 257px;
+  }
+
+  &__wrapper {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    top: 528px;
+    transition: all;
+  }
+
+  &__box {
+    width: 100%;
+    margin-bottom: 20px;
+    background: var(--belyy);
+    border-radius: 20px;
+    padding: 52px;
+  }
+
+  &__subtitle {
+    max-width: 580px;
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: var(--chernyy);
+  }
+
+  &__item {
+    display: block;
+    max-width: 550px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--chernyy);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &::before {
+      content: '';
+      min-width: 24px;
+      min-height: 24px;
+      background-color: var(--akcent);
+      border-radius: 50%;
+
+    }
+  }
+
+  &__accent {
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: var(--akcent);
+  }
+
+  &__text {
+    max-width: 620px;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: var(--chernyy);
+  }
+
+  &__block {
+    padding: 52px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: var(--belyy);
+    background-image: url(../img/algoritm-bg.svg);
+    background-size: cover;
+    background-color: var(--akcent);
+    border-radius: 20px;
+  }
+}

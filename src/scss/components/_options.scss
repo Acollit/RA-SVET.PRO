@@ -1,0 +1,152 @@
+.options {
+  margin-bottom: 160px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 128px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: var(--chernyy);
+  }
+
+  &__content {
+    height: 404px;
+    position: relative;
+    margin-bottom: 62px;
+  }
+
+  &__subtitle {
+    opacity: 0;
+    position: absolute;
+    margin: 0;
+    width: 404px;
+    height: 404px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--belyy);
+    border-radius: 50%;
+    padding: 15px;
+    top: 0;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: var(--chernyy);
+
+    &:first-child {
+      left: 0;
+    }
+
+    &:last-child {
+      right: 0;
+    }
+  }
+
+  &__wrapper {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    background-color: var(--akcent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+  }
+
+  &__img {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__item {
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+
+    &:nth-child(5) {
+      left: -46px;
+    }
+
+    &:nth-child(6) {
+      left: -25px;
+      top: -10px;
+    }
+
+    &:nth-child(7) {
+
+      top: -46px;
+    }
+
+    &:nth-child(8) {
+      right: -25px;
+      top: -10px;
+    }
+
+    &:nth-child(9) {
+      right: -46px;
+    }
+  }
+
+  &__pulse {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    background-color: var(--akcent);
+    border-radius: 50%;
+
+    &--one {
+      opacity: .1;
+      z-index: 1;
+    }
+
+    &--two {
+      opacity: .2;
+      z-index: 2;
+    }
+
+    &--three {
+      opacity: .3;
+      z-index: 3;
+    }
+  }
+
+  &__lines {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  &__accent {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: var(--chernyy);
+
+    span {
+      color: var(--akcent);
+    }
+  }
+}

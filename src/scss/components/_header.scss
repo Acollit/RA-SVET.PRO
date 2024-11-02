@@ -1,0 +1,121 @@
+.header {
+  padding-top: 16px;
+  position: relative;
+  z-index: 5;
+
+  
+
+  &__content {
+    padding: 20px;
+    border-radius: 14px;
+    background: var(--belyy);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  &__link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--chernyy);
+  }
+
+  &__mail {
+    display: block;
+    margin-right: 32px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--chernyy);
+  }
+
+  &__phone {
+    display: block;
+    margin-right: 64px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--chernyy);
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__tel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    background: #08c;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background: #0074b8;
+    }
+  }
+
+  &__wat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    background: #25d366;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background: #11bf52;
+    }
+  }
+
+
+  &__btn {
+    padding: 17px 19px;
+    border-radius: 8px;
+    background: var(--chernyy);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--belyy);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background: var(--akcent);
+      color: var(--belyy);
+    }
+  }
+
+  .burger {
+    @include burger;
+    display: none;
+
+    @include small-tablet {
+      display: block;
+    }
+  }
+
+
+
+}
