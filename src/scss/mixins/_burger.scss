@@ -1,9 +1,15 @@
 /* stylelint-disable */
 
 @mixin burger {
-  --burger-width: 30px;
-  --burger-height: 30px;
-  --burger-line-height: 2px;
+  --burger-width: 33px;
+  --burger-height: 22px;
+  --burger-line-height: 3px;
+
+  @include small-tablet {
+    --burger-width: 21px;
+    --burger-height: 14px;
+    --burger-line-height: 2px;
+  }
 
   position: relative;
   border: none;
@@ -23,6 +29,7 @@
     height: var(--burger-line-height);
     background-color: currentColor;
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    border-radius: 50px;
   }
 
   &::before {
@@ -42,6 +49,7 @@
     background-color: currentColor;
     transform: translateY(-50%);
     transition: transform 0.3s ease-in-out;
+    border-radius: 50px;
   }
 
   &--active {

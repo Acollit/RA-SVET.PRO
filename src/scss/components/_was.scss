@@ -2,6 +2,14 @@
   padding-bottom: 177px;
   position: relative;
 
+  @include big-desktop {
+    margin-bottom: 100px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 82px;
+    padding: 0;
+  }
 
   &::before {
     content: '';
@@ -12,6 +20,17 @@
     left: 0;
     background-image: url(../img/bag.svg);
     z-index: 5;
+
+    @include tablet {
+      bottom: -50px;
+      height: 550px;
+    }
+
+    @include small-tablet {
+      background-image: url(../img/bag-mb.svg);
+      height: 230px;
+      bottom: 50px;
+    }
   }
 
   &__title {
@@ -24,12 +43,34 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 56px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 28px;
+      font-size: 20px;
+    }
   }
 
 
   &__content {
     position: relative;
     height: 730px;
+
+    @include tablet {
+      height: 760px;
+    }
+
+    @include small-tablet {
+      height: 365px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
 
   }
 
@@ -42,8 +83,13 @@
     transform: translateX(-50%) rotate(0deg);
     z-index: -1;
 
+    @include tablet {
+      display: none;
+    }
+
     &:nth-child(5) {
       animation: spin 4s linear infinite;
+
     }
 
     &:nth-child(6) {
@@ -72,11 +118,39 @@
     align-items: center;
     gap: 16px;
 
+    @include tablet {
+      position: static;
+      width: max-content;
+      margin: 0 auto;
+      font-size: 18px;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+
+    @include small-tablet {
+      font-size: 12px;
+      padding: 0;
+      background-color: inherit ;
+      gap: 12px;
+      z-index: 5;
+      margin: 0;
+      max-width: 270px;
+    }
+
     &::before {
       content: '';
-      width: 52px;
-      height: 52px;
+      min-width: 52px;
+      min-height: 52px;
       background-image: url(../img/was-close.svg);
+      background-size: cover;
+
+      @include small-tablet {
+        min-width: 29px;
+        min-height: 29px;
+      }
     }
 
     &:nth-child(1) {
@@ -101,6 +175,21 @@
     display: block;
     margin: 0 auto;
 
+    @include tablet {
+      bottom: -50px;
+    }
+
+    @include small-tablet {
+      position: absolute;
+      left: 50%;
+      bottom: inherit;
+      top: 0;
+      transform: translateX(-50%);
+      width: 176px;
+      height: 351px;
+      object-fit: contain;
+    }
+
   }
 
   &__wrapper {
@@ -121,6 +210,14 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: var(--chernyy);
+
+    @include big-desktop {}
+
+    @include small-tablet {
+      margin-top: 16px;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
   }
 
   &__text {
@@ -132,6 +229,10 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: var(--chernyy);
+
+    @include small-tablet {
+      font-size: 12px;
+    }
   }
 }
 

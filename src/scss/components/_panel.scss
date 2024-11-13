@@ -1,6 +1,14 @@
 .panel {
   margin-bottom: 160px;
 
+  @include big-desktop {
+    margin-bottom: 100px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
+
   &__title {
     max-width: 1420px;
     margin: 0 auto;
@@ -12,6 +20,16 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 32px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
   }
 
   &__accent {
@@ -28,6 +46,17 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 20px;
+      margin-bottom: 44px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+      margin-bottom: 28px;
+      padding: 7px 17px;
+    }
   }
 
   &__wrapper {
@@ -38,6 +67,16 @@
     background: #0b0b0b;
     position: relative;
     border-radius: 31px;
+
+    @include tablet{
+      height: 556px;
+    }
+
+    @include small-tablet {
+      height: 213px;
+      padding: 7px;
+      border-radius: 11px;
+    }
 
 
 
@@ -50,6 +89,11 @@
       height: 614px;
       background-image: url(../img/corpus.svg);
       background-repeat: no-repeat;
+
+
+      @include tablet {
+        display: none;
+      }
     }
   }
 
@@ -62,6 +106,12 @@
     z-index: 10;
     transition: scroll-left 0.5s ease;
     cursor: grab;
+
+    @include big-desktop {}
+
+    @include small-tablet {
+      border-radius: 5px  ;
+    }
   }
 
   &__img {

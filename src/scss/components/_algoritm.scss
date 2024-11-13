@@ -1,6 +1,14 @@
 .algoritm {
   margin-bottom: 160px;
 
+  @include big-desktop {
+    margin-bottom: 272px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 75px;
+  }
+
   &__title {
     margin: 0;
     font-family: var(--font-family);
@@ -9,11 +17,28 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      margin-bottom: 56px;
+      font-size: 42px;
+      text-align: center;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 28px;
+    }
+
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
+
+
+    @include big-desktop {
+      flex-direction: column;
+    }
   }
 
   &__inner {
@@ -29,6 +54,14 @@
     z-index: 2;
     top: 528px;
     transition: all;
+
+    @include big-desktop {
+      top: 434px;
+    }
+
+    @include small-tablet {
+      top: 294px;
+    }
   }
 
   &__box {
@@ -37,6 +70,47 @@
     background: var(--belyy);
     border-radius: 20px;
     padding: 52px;
+
+    &--one {
+      background-image: url(../img/algoritm-bg-1.webp);
+      background-repeat: no-repeat;
+      background-size: 488px 528px;
+      background-position: right bottom;
+
+      @include big-desktop {
+        background-size: contain;
+        background-image: url(../img/algoritm-bg-1-mb.webp);
+      }
+
+      @include small-tablet {
+        background-image: inherit;
+      }
+    }
+
+    &--two {
+      background-image: url(../img/algoritm-bg-2.webp);
+      background-repeat: no-repeat;
+      background-size: 428px 528px;
+      background-position: right bottom;
+
+      @include big-desktop {
+        background-size: contain;
+        background-image: url(../img/algoritm-bg-2-mb.webp);
+      }
+
+      @include small-tablet {
+        background-image: inherit;
+      }
+    }
+
+    @include big-desktop {
+      padding: 32px;
+    }
+
+    @include small-tablet {
+      padding: 20px;
+      border-radius: 8px;
+    }
   }
 
   &__subtitle {
@@ -49,6 +123,17 @@
     line-height: 120%;
     letter-spacing: -0.02em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 24px;
+      max-width: 400px;
+      margin-bottom: 36px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 28px;
+    }
   }
 
   &__item {
@@ -72,6 +157,25 @@
       background-color: var(--akcent);
       border-radius: 50%;
 
+      @include big-desktop {
+        min-width: 22px;
+        min-height: 22px;
+      }
+
+      @include small-tablet {
+        min-width: 16px;
+        min-height: 16px;
+      }
+
+    }
+
+    @include big-desktop {
+      font-size: 18px;
+      max-width: 455px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
     }
   }
 
@@ -82,9 +186,20 @@
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 28px;
-    line-height: 120%;
+    line-height: 130%;
     letter-spacing: -0.02em;
     color: var(--akcent);
+
+    @include big-desktop {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    @include small-tablet {
+      margin-top: 28px;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
   }
 
   &__text {
@@ -93,9 +208,18 @@
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 28px;
-    line-height: 120%;
+    line-height: 130%;
     letter-spacing: -0.02em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      max-width: 400px;
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+    }
   }
 
   &__block {
@@ -110,5 +234,19 @@
     background-size: cover;
     background-color: var(--akcent);
     border-radius: 20px;
+
+    @include big-desktop {
+      font-size: 36px;
+      height: 420px;
+      padding: 32px;
+      background-image: url(../img/algoritm-bg-mb.svg);
+    }
+
+    @include small-tablet {
+      border-radius: 8px;
+      padding: 20px;
+      font-size: 16px;
+      height: 240px;
+    }
   }
 }

@@ -1,6 +1,14 @@
 .trafic {
   margin-bottom: 160px;
 
+  @include big-desktop {
+    margin-bottom: 100px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
+
   &__title {
     max-width: 1000px;
     margin: 0 auto;
@@ -12,12 +20,26 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 44px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 28px;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+
+    @include big-desktop {
+      flex-direction: column;
+    }
   }
 
   &__box {
@@ -31,6 +53,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include big-desktop {
+      height: 446px;
+      padding: 32px;
+      align-items: flex-start;
+    }
+
+    @include small-tablet {
+      height: 340px;
+      padding: 20px;
+      align-items: center;
+    }
 
     &:nth-child(1) {
       background: var(--akcent);
@@ -74,9 +108,26 @@
     &::before {
       content: '';
       display: block;
-      width: 52px;
-      height: 52px;
+      min-width: 52px;
+      min-height: 52px;
       background-image: url(../img/trafic-svg-1.svg);
+      background-size: cover;
+
+      @include small-tablet {
+        min-width: 20px;
+        min-height: 20px;
+      }
+
+    }
+
+    @include big-desktop {
+      font-size: 24px;
+    }
+
+    @include small-tablet {
+      gap: 4px;
+      font-size: 12px;
+      margin-bottom: 8px;
     }
   }
 
@@ -90,6 +141,15 @@
     border-radius: 1111px;
     padding: 16px 24px;
     background: var(--belyy);
+
+    @include big-desktop {
+      font-size: 24px;
+    }
+
+    @include small-tablet {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
   }
 
   &__img {
@@ -98,5 +158,21 @@
     bottom: 0px;
     transform: translateX(-50%);
     display: block;
+
+    @include big-desktop {
+      width: 238px;
+      height: 316px;
+      object-fit: contain;
+      left: inherit;
+      right: 32px;
+      transform: translateX(0%) !important;
+    }
+
+    @include small-tablet {
+      right: 50%;
+      transform: translateX(50%) !important;
+      width: 160px;
+      height: 218px;
+    }
   }
 }

@@ -16,6 +16,19 @@
       right: 124px;
       z-index: -1;
       background-image: url(../img/hero-bg.svg);
+
+      @include big-desktop {
+        display: none;
+      }
+    }
+
+    @include big-desktop {
+      padding-top: 50px;
+    }
+
+    @include small-tablet {
+      padding-top: 40px;
+      padding-bottom: 60px;
     }
   }
 
@@ -35,6 +48,15 @@
     letter-spacing: -0.03em;
     color: var(--chernyy);
 
+    @include big-desktop {
+      font-size: 52px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
   }
 
   &__span {
@@ -50,6 +72,17 @@
     line-height: 120%;
     letter-spacing: -0.02em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      max-width: 600px;
+      font-size: 20px;
+      margin-bottom: 60px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+      margin-bottom: 40px;
+    }
   }
 
   &__descr {
@@ -61,6 +94,15 @@
     line-height: 120%;
     letter-spacing: -0.02em;
     color: var(--akcent);
+
+    @include big-desktop {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+    }
   }
 
   &__box {
@@ -70,10 +112,16 @@
     position: relative;
     z-index: 6;
     width: max-content;
+
+    @include big-desktop {
+      flex-direction: column;
+      margin: 0;
+      width: 100%;
+    }
   }
 
   &__input {
-
+    display: block;
     width: 391px;
     outline: none;
     border-radius: 8px;
@@ -88,9 +136,22 @@
     &::placeholder {
       opacity: 0.5;
     }
+
+    @include big-desktop {
+      padding: 17px 24px;
+      font-size: 18px;
+    }
+
+    @include small-tablet {
+      max-width: 400px;
+      width: 100%;
+      padding: 15px 14px;
+      font-size: 14px;
+    }
   }
 
   &__btn {
+    width: max-content;
     padding: 14px 41px;
     border-radius: 8px;
     background: var(--akcent);
@@ -105,6 +166,11 @@
     &:hover {
       background: var(--chernyy);
     }
+
+    @include small-tablet {
+      padding: 17px 44px;
+      font-size: 14px;
+    }
   }
 
   &__caption {
@@ -115,6 +181,10 @@
     line-height: 100%;
     color: var(--chernyy);
     opacity: 0.5;
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
 
@@ -129,6 +199,28 @@
     padding: 1000px;
     margin: -1000px;
     box-sizing: content-box;
+
+    @include big-desktop {
+      padding: 300px;
+      margin: -300px;
+      max-height: inherit;
+      max-width: inherit;
+      width: 80% !important;
+      height: 80% !important;
+      right: -70px;
+      top: inherit;
+      bottom: -70px;
+    }
+
+    @include tablet {
+      width: 70% !important;
+      height: 70% !important;
+      bottom: -80px;
+    }
+
+    @include small-tablet {
+      display: none !important;
+    }
   }
 
 
@@ -153,6 +245,14 @@
   font-size: 20px;
   line-height: 100%;
   color: var(--chernyy);
+
+  @include big-desktop {
+    font-size: 18px;
+  }
+
+  @include small-tablet {
+    font-size: 14px;
+  }
 }
 
 .iti__selected-country-primary {

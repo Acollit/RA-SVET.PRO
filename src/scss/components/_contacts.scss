@@ -3,6 +3,14 @@
   position: relative;
   z-index: 3;
 
+  @include big-desktop {
+    margin-bottom: 100px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
+
   &__content {
     position: relative;
     padding: 52px;
@@ -10,6 +18,12 @@
     border-radius: 20px;
     height: 780px;
     background-image: url(../img/contacts-bg.svg);
+
+    @include big-desktop {
+      height: auto;
+      padding: 0px;
+      width: 100%;
+    }
 
     &::before {
       content: '';
@@ -20,6 +34,10 @@
       height: 616px;
       border-radius: 50%;
       background-color: var(--goluboy-2);
+
+      @include big-desktop {
+        display: none;
+      }
     }
 
     &::after {
@@ -31,6 +49,21 @@
       height: 698px;
       background-image: url(../img/contacts-img.webp);
       background-size: cover;
+
+      @include big-desktop {
+        bottom: inherit;
+        top: 122px;
+        right: 20px;
+        left: inherit;
+        width: 437px;
+        height: 569px;
+      }
+
+      @include small-tablet {
+        top: 149px;
+        width: 199px;
+        height: 259px;
+      }
     }
   }
 
@@ -40,6 +73,13 @@
     max-width: 1050px;
     width: 100%;
     position: relative;
+
+    @include big-desktop {
+      width: 100%;
+      height: 100%;
+      padding: 0px;
+      max-width: 1440px;
+    }
   }
 
   &__title {
@@ -51,6 +91,21 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 28px;
+      max-width: 555px;
+      padding-left: 32px;
+      padding-top: 32px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 12px;
+      padding-left: 20px;
+      padding-top: 20px;
+      font-size: 20px;
+    }
   }
 
   &__descr {
@@ -61,6 +116,20 @@
     font-size: 28px;
     line-height: 120%;
     color: var(--belyy);
+
+    @include big-desktop {
+      padding-left: 32px;
+      font-size: 24px;
+      max-width: 510px;
+      margin-bottom: 390px;
+    }
+
+    @include small-tablet {
+      max-width: 250px;
+      margin-bottom: 250px;
+      padding-left: 20px;
+      font-size: 16px;
+    }
   }
 
   &__box {
@@ -70,6 +139,19 @@
     padding: 52px;
     background: var(--belyy);
     border-radius: 20px;
+
+    @include big-desktop {
+      position: relative;
+      padding: 32px;
+      width: 100%;
+      max-width: 1440px;
+      z-index: 5;
+    }
+
+    @include small-tablet {
+      padding: 20px;
+    }
+
   }
 
   &__subtitle {
@@ -86,6 +168,16 @@
     span {
       color: var(--akcent);
     }
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 28px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
   }
 
   &__text {
@@ -98,8 +190,26 @@
     line-height: 120%;
     color: var(--chernyy);
 
-    &:last-child {
+    &:nth-child(5) {
       margin-bottom: 0;
+
+      @include big-desktop {
+        margin-bottom: 44px;
+      }
+
+      @include small-tablet {
+        margin-bottom: 20px;
+      }
+    }
+
+    @include big-desktop {
+      font-size: 24px;
+      margin-bottom: 44px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+      margin-bottom: 20px;
     }
   }
 
@@ -107,6 +217,17 @@
     display: flex;
     gap: 16px;
     margin-bottom: 160px;
+
+    @include big-desktop {
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 60px;
+    }
+
+    @include small-tablet {
+      gap: 4px;
+      margin-bottom: 32px;
+    }
   }
 
   &__link {
@@ -124,6 +245,19 @@
     color: var(--belyy);
     transition: all .3s ease-in-out;
 
+    @include big-desktop {
+      width: max-content;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+      max-width: 240px;
+      width: 100%;
+      border-radius: 6px;
+      padding: 16px 24px;
+      gap: 12px;
+    }
+
     &:hover {
       background: #11bf52;
     }
@@ -131,9 +265,15 @@
     &::before {
       content: '';
       display: block;
-      width: 24px;
-      height: 24px;
+      min-width: 24px;
+      min-height: 24px;
       background-image: url(../img/wat.svg);
+      background-size: cover;
+
+      @include small-tablet {
+        min-width: 20px;
+        min-height: 20px;
+      }
     }
 
     &:nth-child(2) {
@@ -155,6 +295,17 @@
     left: 167px;
     top: 264px;
 
+    @include big-desktop {
+      top: 470px;
+      left: 113px;
+    }
+
+    @include small-tablet {
+      top: 189px;
+      left: 20px;
+      max-width: 120px;
+    }
+
   }
 
   &__name {
@@ -166,6 +317,16 @@
     line-height: 100%;
     letter-spacing: -0.02em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 24px;
+      color: var(--belyy);
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
   }
 
   &__poz {
@@ -176,6 +337,15 @@
     line-height: 100%;
     color: var(--chernyy);
     opacity: 0.4;
+
+    @include big-desktop {
+
+      color: var(--belyy);
+    }
+
+    @include small-tablet {
+      font-size: 10px;
+    }
   }
 
   &__inner {
@@ -185,7 +355,19 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
+    @include big-desktop {
+      position: static;
+      display: flex;
+      gap: 12px;
+    }
+
     img {
+
+      @include small-tablet {
+        height: 41px;
+        width: 41px;
+      }
+
       &:nth-child(1) {
         grid-column: 2 span;
       }

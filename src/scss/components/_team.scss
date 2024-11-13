@@ -1,0 +1,10 @@
+.team {
+  margin-bottom: 160px;
+  &__content {
+    height: 840px;
+    width: 100%;
+    background-image: url(../img/team-bg.webp);
+    background-size: cover;
+    border-radius: 20px;
+  }
+}

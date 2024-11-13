@@ -2,6 +2,14 @@
   overflow: hidden;
   padding-bottom: 160px;
 
+  @include big-desktop {
+    padding-bottom: 100px;
+  }
+
+  @include small-tablet {
+    padding-bottom: 60px;
+  }
+
   &__title {
     max-width: 1100px;
     margin: 0 auto;
@@ -13,6 +21,16 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 28px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
   }
 
   &__text {
@@ -24,12 +42,31 @@
     line-height: 120%;
     text-align: center;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 24px;
+      margin-bottom: 56px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+      margin-bottom: 28px;
+    }
   }
 
   &__content {
     position: relative;
     width: 100%;
     height: 724px;
+
+    @include big-desktop {
+      height: 488px;
+    }
+
+    @include small-tablet {
+      height: 280px;
+    }
+
   }
 
   &__line {
@@ -37,6 +74,13 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    @include small-tablet {
+      width: 500px;
+      scale: 1.6;
+      left: 80%;
+      top: 65%;
+    }
   }
 
   &__main {
@@ -49,6 +93,16 @@
     height: 724px;
     width: 724px;
 
+
+    @include big-desktop {
+      width: 488px;
+      height: 488px;
+    }
+
+    @include small-tablet {
+      width: 280px;
+      height: 280px;
+    }
   }
 
   &__wrapper {
@@ -61,6 +115,10 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    @include big-desktop {
+      width: 100%;
+    }
   }
 
   &__subtitle {
@@ -76,6 +134,14 @@
     &:last-child {
       margin: 0;
     }
+
+    @include big-desktop {
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+    }
   }
 
   &__accent {
@@ -87,6 +153,16 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     color: var(--akcent);
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 24px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
   }
 
   &__circle {
@@ -100,6 +176,16 @@
     width: 724px;
     opacity: 0.4;
 
+    @include big-desktop {
+      width: 488px;
+      height: 488px;
+    }
+
+    @include small-tablet {
+      width: 280px;
+      height: 280px;
+      display: none;
+    }
 
   }
 }

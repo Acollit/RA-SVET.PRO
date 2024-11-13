@@ -1,7 +1,17 @@
 .grid {
   margin-bottom: 160px;
 
+  @include big-desktop {
+    margin-bottom: 100px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
+
   &__accent {
+    margin: 0;
+    margin-bottom: 32px;
     width: max-content;
     border-radius: 50px;
     background: var(--akcent);
@@ -13,6 +23,20 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+      width: 100%;
+      margin-bottom: 12px;
+      padding: 7px 44px;
+    }
+
+
   }
 
   &__title {
@@ -25,6 +49,16 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 28px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
   }
 
   &__text {
@@ -36,6 +70,16 @@
     font-size: 28px;
     line-height: 120%;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 24px;
+      margin-bottom: 56px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+      margin-bottom: 28px;
+    }
   }
 
   &__descr {
@@ -47,12 +91,26 @@
     line-height: 120%;
     letter-spacing: -0.02em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 24px;
+      margin-bottom: 28px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 16px;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__img {
@@ -75,6 +133,52 @@
 
     &:nth-child(5) {
       grid-column: 2 span;
+    }
+  }
+
+  &__swiper {
+    display: none !important;
+    position: relative;
+
+    @include tablet {
+      display: block !important;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: cover;
+    z-index: 3;
+
+    @include small-tablet {
+      width: 36px;
+      height: 36px;
+    }
+
+    &--prev {
+      left: 20px;
+      background-image: url(../img/arrow-prev.svg);
+
+      @include small-tablet {
+        left: 8px;
+      }
+    }
+
+    &--next {
+      right: 20px;
+      background-image: url(../img/arrow-next.svg);
+
+      @include small-tablet {
+        right: 8px;
+      }
     }
   }
 

@@ -1,0 +1,33 @@
+<svg width="728" height="420" viewBox="0 0 728 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_366_1168)">
+<path d="M0 20C0 8.9543 8.95431 0 20 0H708C719.046 0 728 8.95431 728 20V400C728 411.046 719.046 420 708 420H20C8.95433 420 0 411.046 0 400V20Z" fill="#004FDF"/>
+<g opacity="0.4">
+<ellipse cx="489.442" cy="265.5" rx="298.5" ry="296.587" transform="rotate(90 489.442 265.5)" fill="url(#paint0_linear_366_1168)"/>
+<ellipse cx="804.372" cy="265.5" rx="298.5" ry="296.587" transform="rotate(90 804.372 265.5)" fill="url(#paint1_linear_366_1168)"/>
+<ellipse cx="206.515" cy="265.5" rx="298.5" ry="296.587" transform="rotate(90 206.515 265.5)" fill="url(#paint2_linear_366_1168)"/>
+<ellipse cx="-76.4137" cy="265.5" rx="298.5" ry="296.587" transform="rotate(90 -76.4137 265.5)" fill="url(#paint3_linear_366_1168)"/>
+</g>
+<path d="M279 469L413.22 303.051C413.565 302.625 414.188 302.556 414.618 302.896L547.559 408.188C548.002 408.539 548.649 408.452 548.985 407.996L766 113" stroke="#F2F5FC" stroke-width="44"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_366_1168" x1="492.224" y1="21.1061" x2="519.693" y2="598.894" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3461FF"/>
+<stop offset="1" stop-color="#8399E9"/>
+</linearGradient>
+<linearGradient id="paint1_linear_366_1168" x1="807.155" y1="21.1061" x2="834.623" y2="598.894" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3461FF"/>
+<stop offset="1" stop-color="#8399E9"/>
+</linearGradient>
+<linearGradient id="paint2_linear_366_1168" x1="209.297" y1="21.1061" x2="236.766" y2="598.894" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3461FF"/>
+<stop offset="1" stop-color="#8399E9"/>
+</linearGradient>
+<linearGradient id="paint3_linear_366_1168" x1="-73.6316" y1="21.1061" x2="-46.163" y2="598.894" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3461FF"/>
+<stop offset="1" stop-color="#8399E9"/>
+</linearGradient>
+<clipPath id="clip0_366_1168">
+<path d="M0 20C0 8.9543 8.95431 0 20 0H708C719.046 0 728 8.95431 728 20V400C728 411.046 719.046 420 708 420H20C8.95433 420 0 411.046 0 400V20Z" fill="white"/>
+</clipPath>
+</defs>
+</svg>

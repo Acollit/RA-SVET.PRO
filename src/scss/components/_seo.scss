@@ -1,16 +1,43 @@
 .seo {
   margin-bottom: 160px;
 
+  @include big-desktop {
+    margin-bottom: 100px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
+
   &__content {
-    padding: 52px 0 52px 52px ;
+    padding: 52px 0 52px 52px;
     border-radius: 20px;
     background: var(--belyy);
     display: flex;
     justify-content: space-between;
+
+    @include big-desktop {
+      flex-direction: column;
+    }
+
+    @include big-desktop {
+      overflow: hidden;
+      padding: 32px 0 0px 32px;
+    }
+
+    @include small-tablet {
+      padding: 20px 20px 0px 20px;
+    }
   }
 
   &__inner {
     max-width: 1000px;
+
+    @include big-desktop {
+      display: flex;
+      flex-direction: column;
+
+    }
   }
 
   &__accent {
@@ -27,6 +54,19 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    @include small-tablet {
+      background-color: inherit;
+      color: var(--akcent);
+      font-size: 12px;
+      padding: 0;
+      margin-bottom: 14px;
+    }
   }
 
   &__title {
@@ -38,6 +78,16 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      max-width: 625px;
+      font-size: 42px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
   }
 
   &__btn {
@@ -49,16 +99,34 @@
     line-height: 120%;
     letter-spacing: -0.02em;
     color: var(--chernyy);
-    opacity: 0.8;
+
     display: flex;
     align-items: center;
     gap: 4px;
+
+    @include big-desktop {
+      margin-bottom: 100px;
+      order: 3;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+      text-decoration: underline;
+      gap: 9px;
+      margin-bottom: 40px;
+    }
 
     &::after {
       content: '';
       width: 29px;
       height: 29px;
       background-image: url(../img/seo-modal.svg);
+
+      @include small-tablet {
+        background-size: cover;
+        width: 16px;
+        height: 16px;
+      }
     }
 
     &::before {
@@ -69,6 +137,10 @@
       width: 156px;
       height: 1px;
       background: var(--chernyy);
+
+      @include small-tablet {
+        display: none;
+      }
     }
   }
 
@@ -81,12 +153,28 @@
     line-height: 120%;
     letter-spacing: -0.02em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      order: 2;
+      margin-bottom: 32px;
+      font-size: 24px;
+      max-width: 530px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 28px;
+    }
   }
 
   &__box {
     margin-top: 116px;
     width: 100%;
     max-width: 673px;
+
+    @include big-desktop {
+      margin: 0;
+    }
   }
 
 
@@ -100,6 +188,16 @@
     line-height: 120%;
     letter-spacing: -0.02em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+
+    }
   }
 
   &__descr {
@@ -110,6 +208,10 @@
     font-size: 18px;
     line-height: 135%;
     color: var(--chernyy);
+
+    @include small-tablet {
+      font-size: 12px;
+    }
   }
 
   &__wrapper {
@@ -119,12 +221,21 @@
     position: relative;
     height: 500px;
     overflow: hidden;
+
+    @include small-tablet {
+      padding-top: 28px;
+      height: 190px;
+    }
   }
 
   &__col {
     position: absolute;
     transform: translateY(100px);
     opacity: 0;
+
+    @include small-tablet {
+      width: 46px;
+    }
 
     &:nth-child(1) {
       left: 0;
@@ -136,35 +247,60 @@
       left: 100px;
       bottom: 0;
       z-index: 6;
+
+      @include small-tablet {
+        left: 42px;
+      }
     }
 
     &:nth-child(3) {
       left: 200px;
       bottom: 0;
       z-index: 5;
+
+      @include small-tablet {
+        left: 84px;
+      }
     }
 
     &:nth-child(4) {
       left: 300px;
       bottom: 0;
       z-index: 4;
+
+      @include small-tablet {
+        left: 126px;
+      }
     }
 
     &:nth-child(5) {
       left: 400px;
       bottom: 0;
       z-index: 3;
+
+      @include small-tablet {
+        left: 168px;
+      }
     }
 
     &:nth-child(6) {
       left: 500px;
       bottom: 0;
       z-index: 2;
+
+      @include small-tablet {
+        left: 210px;
+      }
     }
 
     &:nth-child(7) {
       left: 600px;
       bottom: 0;
+
+      @include small-tablet {
+        left: 252px;
+        display: none;
+      }
     }
   }
 
@@ -176,11 +312,26 @@
     max-width: 0px;
 
     height: 327px;
+
+    @include big-desktop {
+      top: 90px;
+    }
+
+    @include small-tablet {
+      height: 102px;
+      left: 73px;
+      top: 20px;
+    }
   }
 
   &__arrow {
     display: block;
     width: 447px;
+
+    @include small-tablet {
+      width: 142px;
+      height: 102px;
+    }
   }
 
 

@@ -1,6 +1,14 @@
 .options {
   margin-bottom: 160px;
 
+  @include big-desktop {
+    margin-bottom: 100px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 128px;
@@ -11,6 +19,16 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 44px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 28px;
+    }
   }
 
   &__content {
@@ -47,6 +65,24 @@
     &:last-child {
       right: 0;
     }
+
+
+    @include big-desktop {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 220px;
+      font-size: 20px;
+      height: 220px;
+    }
+
+    @include small-tablet {
+      top: 0%;
+      width: 134px;
+      font-size: 20px;
+      height: 134px;
+      font-size: 12px;
+      transform: translateY(0%);
+    }
   }
 
   &__wrapper {
@@ -63,6 +99,15 @@
     align-items: center;
     justify-content: center;
     z-index: 5;
+
+    @include big-desktop {
+      width: 114px;
+      height: 114px;
+    }
+
+    @include small-tablet {
+      top: 60%;
+    }
   }
 
   &__img {
@@ -110,6 +155,13 @@
     background-color: var(--akcent);
     border-radius: 50%;
 
+    @include big-desktop {
+      width: 114px;
+      height: 114px;
+    }
+
+    @include small-tablet {}
+
     &--one {
       opacity: .1;
       z-index: 1;
@@ -132,6 +184,31 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
+
+    @include big-desktop {
+      width: 90%;
+    }
+
+    @include small-tablet {
+      transform: translateX(-50%) rotate(90deg);
+      bottom: -120px;
+      top: inherit;
+      width: 130%;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 220px;
+
+    @include small-tablet {
+      display: none;
+    }
+
   }
 
   &__accent {
@@ -147,6 +224,14 @@
 
     span {
       color: var(--akcent);
+    }
+
+    @include big-desktop {
+      font-size: 42px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
     }
   }
 }

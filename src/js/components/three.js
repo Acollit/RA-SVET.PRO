@@ -1,23 +1,49 @@
 //window.onload = function () {
-  //var shadowRoot = document.querySelector('spline-viewer').shadowRoot;
-  //shadowRoot.querySelector('#logo').remove();
+//var shadowRoot = document.querySelector('spline-viewer').shadowRoot;
+//shadowRoot.querySelector('#logo').remove();
 //}
 
 import { Application } from '@splinetool/runtime';
 
-const canvas = document.querySelector('.shild__3d');
-const canvas2 = document.querySelector('.hero__3d');
-const app = new Application(canvas);
-const app2 = new Application(canvas2);
+const canvasElements = [
+  { element: document.querySelector('.shild__3d'), modelUrl: 'https://draft.spline.design/WRn1FdR8fX0ysLV5/scene.splinecode' },
+  { element: document.querySelector('.hero__3d'), modelUrl: 'https://draft.spline.design/D5R1SJF-hx7hdwsL/scene.splinecode' }
+];
 
-app2.load('https://draft.spline.design/9ZAL6sEzmEwP2JQi/scene.splinecode').then(() => {
+function setupApp(canvasInfo) {
+  if (!canvasInfo.element) return;
 
-  app2.setSize(0, 0, 0); // Задай нужные размеры
+  const app = new Application(canvasInfo.element);
 
-});
+  app.load(canvasInfo.modelUrl)
+    .then(() => {
+      app.setSize(canvasInfo.element.clientWidth, canvasInfo.element.clientHeight);
+      app.stop(); // Начинаем с приостановленным рендером
 
-app.load('https://draft.spline.design/Rn8G7pBrehG0XqLb/scene.splinecode').then(() => {
+      // Создаём IntersectionObserver после загрузки
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            app.play(); // Рендер активен только при видимости
+          } else {
+            app.stop();  // При скрытии рендер останавливается
+          }
+        });
+      });
 
-    app.setSize(0, 0, 0); // Задай нужные размеры
+      observer.observe(canvasInfo.element);
+    })
+    .catch((error) => {
+      console.error('Error loading model:', error); // Логирование ошибки загрузки
+    });
+}
 
-});
+// Настраиваем приложение для каждого canvas
+canvasElements.forEach(setupApp);
+
+
+
+
+
+
+

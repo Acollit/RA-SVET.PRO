@@ -1,6 +1,15 @@
 .othcet {
   padding-bottom: 160px;
   position: relative;
+
+  @include big-desktop {
+    padding-bottom: 100px;
+  }
+
+  @include small-tablet {
+    padding-bottom: 60px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -10,6 +19,10 @@
     left: 0;
     background-image: url(../img/bag.svg);
     z-index: 3;
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
   &__title {
@@ -27,11 +40,26 @@
     span {
       color: var(--akcent);
     }
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 44px;
+      text-align: start;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   &__content {
     position: relative;
     height: 560px;
+
+    @include big-desktop {
+      height: auto;
+    }
   }
 
   &__item {
@@ -49,12 +77,35 @@
     letter-spacing: -0.02em;
     color: var(--chernyy);
 
+    @include big-desktop {
+      position: static;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+      gap: 8px;
+      width: max-content;
+      margin-bottom: 4px;
+
+      &:nth-child(3) {
+        margin-bottom: 20px;
+      }
+    }
+
     &::before {
       content: '';
       display: block;
-      width: 52px;
-      height: 52px;
+      min-width: 52px;
+      min-height: 52px;
       background-image: url(../img/trafic-svg-1.svg);
+      background-size: cover;
+
+      @include small-tablet {
+        min-width: 20px;
+        min-height: 20px;
+      }
     }
 
     &:nth-child(1) {
@@ -79,6 +130,11 @@
     transform: translateX(-50%);
     top: 90px;
     z-index: 3;
+
+    @include big-desktop {
+      position: static;
+      transform: translateX(0%);
+    }
   }
 
   &__circle {
@@ -87,6 +143,11 @@
     top: 30px;
     transform: translateX(-50%) rotate(0deg);
     z-index: -1;
+
+
+    @include big-desktop {
+      display: none;
+    }
 
     &:nth-child(5) {
       animation: spin2 4s linear infinite;

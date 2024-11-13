@@ -1,6 +1,14 @@
 .for {
   margin-bottom: 160px;
 
+  @include big-desktop {
+    margin-bottom: 100px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
+
   &__content {
     position: relative;
     border-radius: 20px;
@@ -10,6 +18,30 @@
     justify-content: space-between;
     overflow: hidden;
     margin-bottom: 28px;
+
+    @include big-desktop {
+      padding: 32px;
+      margin-bottom: 12px;
+    }
+
+    @include small-tablet {
+      padding: 20px;
+    }
+
+
+
+  }
+
+  &__inner {
+
+    @include big-desktop {
+      margin-bottom: 500px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 220px;
+    }
+
   }
 
   &__title {
@@ -21,12 +53,33 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 44px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
   }
 
   &__items {
     display: flex;
     gap: 19px;
     margin-bottom: 140px;
+
+    @include big-desktop {
+      gap: 12px;
+      margin-bottom: 64px;
+    }
+
+    @include small-tablet {
+      gap: 8px;
+      margin-bottom: 28px;
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -48,6 +101,20 @@
       width: 40px;
       height: 40px;
       background-image: url(../img/for-check.svg);
+      background-size: cover;
+
+      @include small-tablet {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    @include big-desktop {
+      font-size: 18px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
     }
   }
 
@@ -60,6 +127,16 @@
     line-height: 120%;
     letter-spacing: -0.02em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
   }
 
   &__accent {
@@ -78,6 +155,16 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    @include big-desktop {
+      font-size: 18px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+      padding: 6px 14px;
+      max-width: 230px;
+    }
   }
 
   &__box {
@@ -87,9 +174,25 @@
     padding: 52px;
     width: 100%;
     background-image: url(../img/for-bg.svg);
+    background-repeat: no-repeat;
     background-size: contain;
     bottom: -48px;
     right: 52px;
+
+    @include big-desktop {
+      right: inherit;
+      left: 0;
+      background-size: cover;
+      height: 500px;
+      bottom: 0;
+      padding: 32px;
+    }
+
+    @include small-tablet {
+      height: 220px;
+      padding: 20px;
+    }
+
   }
 
   &__subtitle {
@@ -100,6 +203,16 @@
     line-height: 120%;
     letter-spacing: -0.02em;
     color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 36px;
+      margin: 50px 0 60px 0;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin: 25px 0 16px 0;
+    }
   }
 
   &__list-item {
@@ -109,6 +222,10 @@
 
     &:not(:last-child) {
       margin-bottom: 12px;
+
+      @include small-tablet {
+        margin-bottom: 4px;
+      }
     }
 
     &:nth-child(1) {
@@ -310,6 +427,14 @@
     font-size: 16px;
     line-height: 120%;
     color: var(--belyy);
+
+    @include big-desktop {}
+
+    @include small-tablet {
+      font-size: 5px;
+      min-width: 52px;
+      max-width: 52px;
+    }
   }
 
   &__line {
@@ -317,6 +442,10 @@
     height: 8px;
     border-radius: 2px;
     background: var(--belyy);
+
+    @include small-tablet {
+      height: 3px;
+    }
   }
 
   &__wrapper {
@@ -325,6 +454,18 @@
     border-radius: 20px;
     display: flex;
     gap: 92px;
+
+    @include big-desktop {
+      flex-direction: column;
+      padding: 32px;
+      gap: 56px;
+    }
+
+    @include small-tablet {
+      padding: 20px;
+      gap: 26px;
+      border-radius: 8px;
+    }
   }
 
   &__box-title {
@@ -336,6 +477,14 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 36px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+    }
   }
 
   &__subitem {
@@ -348,17 +497,42 @@
     display: flex;
     align-items: center;
     gap: 24px;
+
+    @include big-desktop {
+      font-size: 24px;
+      gap: 16px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+      gap: 12px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 32px;
+
+      @include small-tablet {
+        margin-bottom: 12px;
+      }
     }
 
     &::before {
       content: '';
       display: block;
-      width: 34px;
-      height: 34px;
+      min-width: 34px;
+      min-height: 34px;
       background-size: cover;
       background-image: url(../img/for-check.svg);
+
+      @include big-desktop {
+        min-width: 29px;
+        min-height: 29px;
+      }
+
+      @include small-tablet {
+        min-width: 20px;
+        min-height: 20px;
+      }
     }
   }
 

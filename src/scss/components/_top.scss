@@ -2,6 +2,14 @@
   padding-bottom: 195px;
   position: relative;
 
+  @include big-desktop {
+    padding-bottom: 100px;
+  }
+
+  @include small-tablet {
+    padding-bottom: 84px;
+  }
+
   &__title {
     position: relative;
     z-index: 6;
@@ -15,6 +23,16 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 32px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
   }
 
   &__descr {
@@ -31,6 +49,17 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 28px;
+      width: 100%;
+      padding: 6px 42px;
+      font-size: 12px;
+    }
   }
 
 
@@ -45,9 +74,22 @@
     z-index: -1;
     opacity: 0;
 
+    @include big-desktop {
+      width: 329px;
+      height: 251px;
+      object-fit: contain;
+
+      @include small-tablet {
+        width: 137px;
+        height: 105px;
+      }
+    }
+
     &:nth-child(1) {
       left: 0;
       top: 0;
+
+
     }
 
     &:nth-child(3) {
@@ -56,7 +98,21 @@
     }
 
     &--three {
+      display: block;
+      margin: 0 auto;
       opacity: 0;
+
+      @include big-desktop {
+        width: 329px;
+        height: 251px;
+        object-fit: contain;
+
+      }
+
+      @include small-tablet {
+        width: 137px;
+        height: 105px;
+      }
     }
   }
 
@@ -74,6 +130,21 @@
     left: 50.7%;
     bottom: -82px;
     transform: translateX(-50%) scale(.3);
+
+    @include big-desktop {
+      width: 110px;
+      height: 150px;
+      object-fit: contain;
+      bottom: -14px;
+      left: 50.3%;
+    }
+
+    @include small-tablet {
+      width: 46px;
+      height: 63px;
+      bottom: -6px;
+      left: 50.3%;
+    }
   }
 
   &__radial {
@@ -83,12 +154,38 @@
     &--one {
       left: 0;
       bottom: 0;
+
+      @include big-desktop {
+        left: -300px;
+        width: 820px;
+        height: 820px;
+      }
+
+      @include small-tablet {
+        left:  -50px;
+        width: 210px;
+        height: 210px;
+      }
+
     }
 
     &--two {
       right: 0;
       bottom: -200px;
       transform: translate3d(0px, 0px, 0px) rotate(90deg);
+
+      @include big-desktop {
+        right: -300px;
+        width: 820px;
+        height: 820px;
+      }
+
+      @include small-tablet {
+        bottom: -100px;
+        right: -50px;
+        width: 210px;
+        height: 210px;
+      }
     }
   }
 

@@ -1,6 +1,13 @@
 .meeting {
   margin-bottom: 160px;
 
+  @include big-desktop {
+    margin-bottom: 100px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
 
   &__content {
     border-radius: 20px;
@@ -9,6 +16,14 @@
     background-image: url(../img/contacts-bg.svg);
     display: flex;
     align-items: flex-start;
+
+    @include big-desktop {
+      padding: 32px;
+    }
+
+    @include small-tablet {
+      padding: 20px;
+    }
   }
 
   &__inner {
@@ -31,11 +46,45 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 42px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 4px;
+      font-size: 20px;
+    }
+  }
+
+  &__mb {
+    display: none;
+    margin-bottom: 44px;
+
+    @include big-desktop {
+      display: block;
+    }
+
+    @include small-tablet {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__img {
+    display: block;
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
   &__line {
     margin-bottom: 32px;
 
+    @include small-tablet {
+      max-width: 125px;
+      margin-bottom: 12px;
+    }
   }
 
   &__text {
@@ -47,6 +96,16 @@
     font-size: 28px;
     line-height: 120%;
     color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 24px;
+      margin-bottom: 44px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
   }
 
   &__btns {
@@ -57,6 +116,19 @@
     padding-bottom: 120px;
     margin-bottom: 40px;
     border-bottom: 1px solid var(--belyy);
+
+    @include big-desktop {
+      padding-bottom: 60px;
+      margin-bottom: 60px;
+    }
+
+    @include small-tablet {
+      gap: 12px;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 28px;
+      margin-bottom: 28px;
+    }
   }
 
   &__action {
@@ -65,6 +137,14 @@
     font-size: 20px;
     line-height: 100%;
     color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+    }
   }
 
   &__btn {
@@ -82,12 +162,30 @@
       color: var(--belyy);
       background: var(--chernyy);
     }
+
+    @include small-tablet {
+      font-size: 14px;
+      padding: 14px 24px;
+      width: 100%;
+    }
   }
 
   &__wrapper {
     display: flex;
     gap: 50px;
     align-items: center;
+
+    @include big-desktop {
+      width: 100%;
+      flex-direction: column;
+      gap: 28px;
+      align-items: flex-start;
+    }
+
+    @include small-tablet {
+      align-items: center;
+      gap: 23px;
+    }
   }
 
   &__descr {
@@ -99,6 +197,16 @@
     font-size: 28px;
     line-height: 120%;
     color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 24px;
+      max-width: 1200px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+      text-align: center;
+    }
   }
 
   &__link {
@@ -118,10 +226,25 @@
     &::before {
       content: '';
       display: block;
-      width: 24px;
-      height: 24px;
+      min-width: 24px;
+      min-height: 24px;
       background-image: url(../img/tel.svg);
+      background-size: cover;
+
+      @include small-tablet {
+        min-width: 20px;
+        min-height: 20px;
+      }
     }
+
+    @include small-tablet {
+      font-size: 14px;
+      padding: 16px 44px;
+      width: 100%;
+      justify-content: center;
+    }
+
+
   }
 
   &__on {

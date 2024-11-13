@@ -12,6 +12,15 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+    }
   }
 
 
@@ -45,27 +54,80 @@
     transform: scale(.7);
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 270px;
+
+    @include big-desktop {
+      font-size: 4rem;
+      height: 240px;
+    }
+
+    @include small-tablet {
+      font-size: 2rem;
+      width: 100%;
+      height: 150px;
+    }
 
 
     &:first-child {
       height: 390px;
+
+      @include small-tablet {
+        padding-top: 50px;
+        height: 150px;
+      }
     }
 
     &:last-child {
       height: 390px;
+
+      @include small-tablet {
+        padding-bottom: 50px;
+        height: 150px;
+      }
     }
 
     &:nth-child(2) {
       height: 230px;
+
+      @include small-tablet {
+        height: 130px;
+      }
     }
 
     &:nth-child(3) {
       height: 230px;
+
+      @include small-tablet {
+        height: 130px;
+      }
     }
 
     &:nth-child(4) {
       height: 230px;
+
+      @include small-tablet {
+        height: 130px;
+      }
+
+    }
+
+    &:nth-child(5) {
+      height: 290px;
+
+      @include small-tablet {
+        height: 130px;
+      }
+
+    }
+
+    &:nth-child(6) {
+      height: 290px;
+
+      @include small-tablet {
+        height: 130px;
+      }
+
     }
 
   }

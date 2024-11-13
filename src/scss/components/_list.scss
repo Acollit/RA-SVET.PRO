@@ -4,15 +4,55 @@
   background: var(--belyy);
   border-radius: 0 0 30px 30px;
 
+  @include big-desktop {
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+  }
+
+  @include small-tablet {
+    border-radius: 0px;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+  }
+
   &__title {
+    max-width: 750px;
     margin: 0;
     margin-bottom: 80px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--chernyy);
+
+    @include big-desktop {
+      margin-bottom: 44px;
+      font-size: 42px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      margin-bottom: 28px;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
     gap: 16px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include big-desktop {
+      gap: 12px;
+    }
+
+    @include small-tablet {
+      gap: 8px;
+    }
   }
 
   &__box {
@@ -21,6 +61,15 @@
     background: var(--fonovyy);
     border-radius: 20px;
     padding: 52px;
+
+    @include big-desktop {
+      padding: 32px;
+    }
+
+    @include small-tablet {
+      padding: 20px;
+      border-radius: 8px;
+    }
 
 
 
@@ -56,6 +105,16 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 36px;
+      margin-bottom: 37px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
   }
 
   &__item {
@@ -64,8 +123,16 @@
     align-items: flex-start;
     gap: 24px;
 
+    @include small-tablet {
+      position: relative;
+    }
+
     &:not(:last-child) {
       margin-bottom: 32px;
+
+      @include small-tablet {
+        margin-bottom: 16px;
+      }
     }
 
     &::before {
@@ -74,6 +141,14 @@
       min-width: 52px;
       min-height: 52px;
       background-image: url(../img/trafic-svg-2.svg);
+      background-size: cover;
+
+      @include small-tablet {
+        position: absolute;
+        min-width: 16px;
+        min-height: 16px;
+        top: -1px;
+      }
     }
   }
 
@@ -89,6 +164,12 @@
     letter-spacing: -0.02em;
     color: var(--chernyy);
 
+    @include small-tablet {
+      font-size: 14px;
+      margin-bottom: 8px;
+      padding-left: 28px;
+    }
+
 
   }
 
@@ -99,5 +180,9 @@
     font-size: 18px;
     line-height: 135%;
     color: var(--chernyy);
+
+    @include small-tablet {
+      font-size: 10px;
+    }
   }
 }

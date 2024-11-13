@@ -1,0 +1,353 @@
+.post {
+  padding-bottom: 160px;
+  padding-top: 20px;
+
+  @include tablet {
+    padding-bottom: 70px;
+  }
+
+  &__wrapper {
+    position: relative;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 160px;
+    max-width: 1096px;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  &__nav {
+    margin-bottom: 96px;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      padding: 0 15px;
+    }
+  }
+
+  &__content {
+    padding: 60px 0px 60px 0px;
+
+    @include tablet {
+      padding: 44px 15px 44px 15px;
+    }
+
+    p {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: var(--chernyy);
+      opacity: 0.8;
+
+      @include tablet {
+        font-size: 15px;
+      }
+    }
+
+    strong {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 120%;
+      color: var(--chernyy);
+
+      @include tablet {
+        font-size: 18px;
+      }
+    }
+
+    .is-layout-flex {
+      gap: 30px;
+      margin-bottom: 50px;
+
+      @include tablet {
+        flex-direction: column;
+
+        p {
+          flex-basis: auto;
+        }
+      }
+    }
+
+    .wp-block-gallery {
+      margin: 60px 0;
+      gap: 15px;
+
+      @include tablet {
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        flex-direction: row;
+      }
+    }
+
+    ol {}
+
+    ul {
+      margin: 0;
+      padding-inline-start: 25px
+    }
+
+    li {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 130%;
+      color: #37405e;
+
+      @include tablet {
+        font-size: 15px;
+      }
+    }
+
+    blockquote {
+      position: relative;
+      margin: 0 auto !important;
+      padding: 98px 0;
+      max-width: 800px;
+      width: 100%;
+
+      @include tablet {
+        padding: 74px 0;
+      }
+
+      p {
+        margin: 0;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 120%;
+        color: var(--chernyy);
+
+        @include tablet {
+          font-size: 17px;
+
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 341px;
+        height: 66px;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        background-image: url(../img/blockquote-1.svg);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 341px;
+        height: 66px;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        background-image: url(../img/blockquote-2.svg);
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 60px;
+
+    @include tablet {
+      margin-bottom: 50px;
+      gap: 14px;
+    }
+  }
+
+  &__name {
+    display: block;
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--chernyy);
+  }
+
+  &__poz {
+    display: block;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--chernyy);
+    opacity: 0.5;
+  }
+
+  &__wrapper-time {
+    position: absolute;
+    right: 48px;
+    bottom: 76px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    text-align: right;
+    color: rgba(55, 64, 94, 0.7);
+
+    @include tablet {
+      right: 14px;
+      bottom: 44px;
+    }
+  }
+
+  &__swiper {
+
+    @include tablet {
+      padding: 0 15px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 60px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--chernyy);
+
+    @include tablet {
+      padding: 0 15px;
+    }
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    border-radius: 14px;
+    background: #fff;
+  }
+
+  &__inner {
+    position: relative;
+    padding: 20px 20px 28px 20px;
+    height: 230px;
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    color: #3b4258;
+  }
+
+  &__text {
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 130%;
+      color: rgba(59, 66, 88, 0.85);
+    }
+
+  }
+
+  &__time {
+    position: absolute;
+    left: 20px;
+    bottom: 28px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 120%;
+    color: #7d849a;
+  }
+
+  &__link {
+    position: absolute;
+    padding-right: 32px;
+    right: 20px;
+    bottom: 28px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120%;
+    color: #3953ab;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      right: 0;
+      top: -3px;
+      background-image: url(../img/blog-arrow.svg);
+    }
+  }
+
+  &__prev {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120%;
+    color: var(--chernyy);
+
+    &::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url(../img/nav-prev.svg);
+    }
+  }
+
+  &__next {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 120%;
+    color: #37405e;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url(../img/nav-next.svg);
+    }
+  }
+
+  &__news {
+
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+
+    @include tablet {
+      padding: 0 15px;
+    }
+  }
+
+
+}

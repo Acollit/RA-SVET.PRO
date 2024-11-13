@@ -3,7 +3,7 @@
   position: relative;
   z-index: 5;
 
-  
+
 
   &__content {
     padding: 20px;
@@ -12,12 +12,34 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+
+    @include small-tablet {
+      background: var(--fonovyy);
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    display: block;
+    img {
+      @include small-tablet {
+        display: block;
+        width: 85px;
+        height: 19px;
+        object-fit: contain;
+      }
+    }
   }
 
   &__list {
     display: flex;
     gap: 16px;
     align-items: center;
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
   &__link {
@@ -36,6 +58,10 @@
     font-size: 20px;
     line-height: 100%;
     color: var(--chernyy);
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
   &__phone {
@@ -46,6 +72,10 @@
     font-size: 20px;
     line-height: 100%;
     color: var(--chernyy);
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
   &__contacts {
@@ -72,6 +102,16 @@
     &:hover {
       background: #0074b8;
     }
+
+    @include small-tablet {
+      width: 28px;
+      height: 28px;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
   }
 
   &__wat {
@@ -86,6 +126,16 @@
 
     &:hover {
       background: #11bf52;
+    }
+
+    @include small-tablet {
+      width: 28px;
+      height: 28px;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 
@@ -105,14 +155,23 @@
       background: var(--akcent);
       color: var(--belyy);
     }
+
+    @include small-tablet {
+      display: none
+    }
   }
 
   .burger {
     @include burger;
     display: none;
+    margin-left: 32px;
+
+    @include big-desktop {
+      display: block;
+    }
 
     @include small-tablet {
-      display: block;
+      margin-left: 23px;
     }
   }
 

@@ -1,6 +1,14 @@
 .shaman {
   margin-bottom: 160px;
 
+  @include big-desktop {
+    margin-bottom: 100px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
+
   &__title {
     max-width: 970px;
     margin: 0 auto;
@@ -12,6 +20,16 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 42px;
+      margin-bottom: 100px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 50px;
+      font-size: 20px;
+    }
   }
 
 
@@ -20,52 +38,96 @@
     z-index: 6;
     opacity: 0;
 
+    @include small-tablet {
+      width: 28px;
+      height: 28px;
+    }
+
     &:nth-child(5) {
       left: 50%;
       transform: translateX(-50%);
       top: -40px;
+
+      @include small-tablet {
+        top: -15px;
+      }
     }
 
     &:nth-child(6) {
       right: 30px;
       transform: translateX(0%);
       top: 30px;
+
+      @include small-tablet {
+        right: 25px;
+        top: 25px;
+      }
     }
 
     &:nth-child(7) {
       right: -45px;
       transform: translateX(0%);
       top: 210px;
+
+      @include small-tablet {
+        right: -12px;
+        top: 105px;
+      }
     }
 
     &:nth-child(8) {
       right: 20px;
       transform: translateX(0%);
       top: 390px;
+
+      @include small-tablet {
+        right: 15px;
+        top: 200px;
+      }
     }
 
     &:nth-child(9) {
       right: 33%;
       transform: translateX(-50%);
       bottom: -40px;
+
+      @include small-tablet {
+        right: 40%;
+        bottom: -10px;
+      }
     }
 
     &:nth-child(10) {
       left: 45px;
       transform: translateX(0%);
       top: 415px;
+
+      @include small-tablet {
+        left: 30px;
+        top: 210px;
+      }
     }
 
     &:nth-child(11) {
       left: -40px;
       transform: translateX(0%);
       top: 255px;
+
+      @include small-tablet {
+        left: -12px;
+        top: 130px;
+      }
     }
 
     &:nth-child(12) {
       left: 20px;
       transform: translateX(0%);
       top: 60px;
+
+      @include small-tablet {
+        left: 20px;
+        top: 30px;
+      }
     }
 
   }
@@ -76,6 +138,11 @@
     margin: 0 auto;
     max-width: 525px;
     height: 520px;
+
+    @include small-tablet {
+      max-width: 260px;
+      height: 262px;
+    }
   }
 
   &__text {
@@ -93,6 +160,21 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: var(--akcent);
+
+    @include small-tablet {
+      font-size: 16px;
+      padding: 0 23px;
+    }
+  }
+
+  &__cub {
+    @include small-tablet {
+      max-width: 260px;
+      height: 262px;
+      position: relative;
+      left: -2px;
+      top: -2px;
+    }
   }
 
 
@@ -100,9 +182,17 @@
     opacity: 1;
     position: absolute;
     left: -2px;
-    top:-2px;
+    top: -2px;
     z-index: 5;
     transform: translate(-50%, -50%);
+
+    @include small-tablet {
+      width: 9px;
+      height: 9px;
+      left: -2px;
+      top: -2px;
+    }
+
   }
 
 
@@ -117,4 +207,5 @@
   overflow: visible;
   width: 100%;
   height: 100%;
+
 }

@@ -4,3 +4,6 @@ import './components/masck.js';
 import './components/scroll.js';
 import './components/aos.js';
 import './components/acardion.js';
+import './components/swiper.js';
+import './components/modal.js';
+import './components/map.js';

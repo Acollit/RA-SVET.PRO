@@ -1,6 +1,14 @@
 .about {
   margin-bottom: 160px;
 
+  @include big-desktop {
+    margin-bottom: 100px;
+  }
+
+  @include small-tablet {
+    margin-bottom: 60px;
+  }
+
   &__content {
     position: relative;
     border-radius: 20px;
@@ -9,6 +17,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    height: 724px;
 
 
     &::before {
@@ -21,6 +30,36 @@
       height: 724px;
       background-image: url(../img/about-img.webp);
       background-size: cover;
+
+      @include big-desktop {
+        width: 423px;
+        height: 515px;
+        left: inherit;
+        right: 30px;
+      }
+
+      @include small-tablet {
+        width: 240px;
+        height: 383px;
+        bottom: inherit;
+        top: 10px;
+        right: 50%;
+        background-image: url(../img/about-img-mb.webp);
+        transform: translateX(50%);
+      }
+    }
+
+    @include big-desktop {
+      padding: 20px;
+      height: 500px;
+      margin-bottom: 10px;
+    }
+
+    @include small-tablet {
+      height: 489px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
   }
 
@@ -32,10 +71,19 @@
     width: 100%;
     position: relative;
     z-index: 1;
+
+    @include big-desktop {
+      padding: 32px;
+      max-width: 360px;
+    }
+
+    @include small-tablet {
+      padding: 21px;
+    }
   }
 
   &__inner {
-    position: relative;
+    position: absolute;
     max-width: 672px;
     background: var(--akcent);
     border-radius: 20px;
@@ -43,6 +91,20 @@
     width: 100%;
     height: 620px;
     overflow: hidden;
+    right: 52px;
+    bottom: 52px;
+
+    @include big-desktop {
+      max-width: 768px;
+      position: relative;
+      right: 0px;
+      bottom: 0px;
+    }
+
+    @include small-tablet {
+      padding: 20px;
+      height: 300px;
+    }
   }
 
   &__subtitle {
@@ -54,6 +116,16 @@
     line-height: 100%;
     letter-spacing: -0.02em;
     color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 36px;
+      margin-bottom: 24px;
+    }
+
+    @include small-tablet {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
   }
 
   &__descr {
@@ -67,6 +139,14 @@
     letter-spacing: -0.02em;
     color: var(--belyy);
     opacity: 0.8;
+
+    @include big-desktop {
+      font-size: 18px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+    }
   }
 
   &__name {
@@ -78,6 +158,16 @@
     line-height: 100%;
     letter-spacing: -0.02em;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
   }
 
   &__poz {
@@ -89,6 +179,16 @@
     line-height: 100%;
     color: var(--chernyy);
     opacity: 0.4;
+
+    @include big-desktop {
+      font-size: 16px;
+      margin-bottom: 52px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+      margin-bottom: 40px;
+    }
   }
 
   &__text {
@@ -99,6 +199,14 @@
     font-size: 18px;
     line-height: 135%;
     color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 18px;
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+    }
   }
 
   &__wrapper {
@@ -108,6 +216,13 @@
     left: 0;
     height: 326px;
 
+
+    @include small-tablet {
+      height: 150px;
+      max-width: 340px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
 
@@ -116,11 +231,25 @@
     bottom: 0;
     opacity: 0;
 
+    @include small-tablet {
+      width: 28px;
+      height: 28px;
+    }
+
     &:nth-child(3) {
       left: 0;
       top: 0;
       position: absolute;
       opacity: 0;
+
+      @include big-desktop {
+        left: 20px;
+      }
+
+      @include small-tablet {
+        top: 20px;
+        left: 65px;
+      }
     }
 
     &:nth-child(4) {
@@ -129,6 +258,15 @@
       position: absolute;
       opacity: 0;
 
+      @include big-desktop {
+        left: 20px;
+      }
+
+      @include small-tablet {
+        top: 60px;
+        left: 45px;
+      }
+
     }
 
     &:nth-child(5) {
@@ -136,6 +274,15 @@
       bottom: 15px;
       position: absolute;
       opacity: 0;
+
+      @include big-desktop {
+        left: 20px;
+      }
+
+      @include small-tablet {
+        bottom: 35px;
+        left: 45px;
+      }
     }
 
     &:nth-child(6) {
@@ -143,12 +290,27 @@
       bottom: 80px;
       position: absolute;
 
+      @include big-desktop {
+        left: 47%;
+      }
+
+      @include small-tablet {
+        bottom: 60px;
+      }
     }
 
     &:nth-child(7) {
       left: 48%;
       bottom: 80px;
       position: absolute;
+
+      @include big-desktop {
+        left: 47%;
+      }
+
+      @include small-tablet {
+        bottom: 60px;
+      }
 
     }
 
@@ -158,6 +320,16 @@
     position: absolute;
     left: 0;
     bottom: 0;
+
+    @include big-desktop {
+      margin: 0 auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include small-tablet {
+      bottom: 15px;
+    }
   }
 
   &__processer {
@@ -166,5 +338,20 @@
     bottom: 40px;
     transform: translateX(-50%);
     z-index: 5;
+
+    @include big-desktop {
+      left: 48%;
+    }
+
+    @include small-tablet {
+      width: 87px;
+      bottom: 30px;
+      height: 87px;
+    }
+  }
+
+  &__overlay {
+
+    position: relative;
   }
 }
